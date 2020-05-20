@@ -27,8 +27,8 @@ router.post('/register', async (req, res) => {
 		console.log('thank you for logging in ');
 		const token = jwt.sign({ _id: user._id, name: user.name, email: user.email }, process.env.TOKEN_SECRET);
 		res
-			.header('auth-token', token)
-			.header('access-control-expose-headers', 'auth-token')
+			.header('Authorization', token)
+			.header('access-control-expose-headers', 'Authorization')
 			.send(_.pick(user, [ '_id', 'name', 'email' ]));
 	} catch (err) {
 		res.status(400).send(err);
@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
 		{ _id: user._id, name: user.name, email: user.email, movies: user.movies },
 		process.env.TOKEN_SECRET
 	);
-	res.header('auth-token', token).header('access-control-expose-headers', 'auth-token').send(token);
+	res.header('Authorization', token).header('access-control-expose-headers', 'Authorization').send(token);
 	res.send('Logged in');
 });
 

@@ -1,8 +1,0 @@
-{
-  "apiKey": "?api_key=ed1b18e9826bd1190664c17b9c51cd83",
-  "movieApi": "https://api.themoviedb.org/3/search/movie?api_key=ed1b18e9826bd1190664c17b9c51cd83&query=",
-  "movieIdApi": "https://api.themoviedb.org/3/movie/",
-  "movieIdApiKey": "?api_key=ed1b18e9826bd1190664c17b9c51cd83&language=en-US",
-  "poster": "http://image.tmdb",
-  "apiUrl": "http://localhost:5000/user"
-}
